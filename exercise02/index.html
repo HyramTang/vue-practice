@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise02</title>
+    <script src="/assets/js/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="exercise">
+        <button @click="showAlert">Click to show Alert</button>
+        <div>
+            <input type="text" v-on:keydown="value=$event.target.value">
+            <p>{{value}}</p>
+        </div>
+
+        <div>
+            <input type="text" @keydown.enter="value=$event.target.value">
+            <p>{{value}}</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#exercise',
+            data: {
+                value: ''
+            },
+            methods: {
+                showAlert: function () {
+                    alert('you clicked the button~');
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
