@@ -97,14 +97,7 @@
             data: {
                 isHighlight: false,
                 isShrink: false,
-                highlightClass: 'highlight',
-                shrinkClass: 'shrink',
                 inputClass: '',
-                isShowInputClass: true,
-                effectClass: {
-                    highlight: false,
-                    shrink: false
-                },
                 float: 'float',
                 isVisiable: true,
                 myStyle: {
@@ -125,12 +118,6 @@
                         that.isHighlight = !that.isHighlight;
                         that.isShrink = !that.isShrink;
                     }, 1000);
-                },
-                addInputClass: function (event) {
-                    this.inputClass = event.target.value;
-                },
-                changeInputClass: function (event) {
-                    this.isShowInputClass = Boolean(event.target.value);
                 },
                 startProgress: function (event) {
                     var vm = this;
